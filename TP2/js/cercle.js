@@ -24,19 +24,19 @@ function carre(val){
 function createPoint(){
 	var p1 = new Point(Math.floor(Math.random() * Math.floor(myCanvas.width)), Math.floor(Math.random() * Math.floor(myCanvas.height)));
 	var p2 = new Point(Math.floor(Math.random() * Math.floor(myCanvas.width)), Math.floor(Math.random() * Math.floor(myCanvas.height)));
-    var p3 = new Point(Math.floor(Math.random() * Math.floor(myCanvas.width)), Math.floor(Math.random() * Math.floor(myCanvas.height)));
+    	var p3 = new Point(Math.floor(Math.random() * Math.floor(myCanvas.width)), Math.floor(Math.random() * Math.floor(myCanvas.height)));
 
 	cercle = findCircle(p1, p2, p3);
 	drawCircle();
 
-    ctx.rect(p1.x, p1.y, 50, 50);
-    ctx.stroke();
-	
-    ctx.rect(p2.x, p2.y, 50, 50);
-    ctx.stroke();
-	
-    ctx.rect(p3.x, p3.y, 50, 50);
-    ctx.stroke();
+	ctx.rect(p1.x, p1.y, 50, 50);
+	ctx.stroke();
+
+	ctx.rect(p2.x, p2.y, 50, 50);
+	ctx.stroke();
+
+	ctx.rect(p3.x, p3.y, 50, 50);
+	ctx.stroke();
 } 
 
 function findCircle(p1, p2, p3){
