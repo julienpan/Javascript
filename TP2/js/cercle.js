@@ -4,8 +4,8 @@ var cercle;
 
 class Point{
 	constructor(x, y){
-	    this.x = x;
-	    this.y = y;
+		this.x = x;
+	    	this.y = y;
 	}
 }
 
@@ -18,7 +18,7 @@ class Circle {
 }
 
 function carre(val){
-    return val * val; 
+	return val * val; 
 }
 
 function createPoint(){
@@ -44,7 +44,7 @@ function findCircle(p1, p2, p3){
 
 	var cy = - (((p2.x - p1.x) / (p2.y - p1.y)) * cx) + ((carre(p2.x) - carre(p1.x) + carre(p2.y) - carre(p1.y)) / (2 * (p2.y - p1.y)));
 
-    var r = Math.sqrt(carre(p1.x - cx) + carre(p1.y - cy));
+    	var r = Math.sqrt(carre(p1.x - cx) + carre(p1.y - cy));
     
 	return new Circle(cx, cy, r);
 }
@@ -57,10 +57,10 @@ function drawCircle(){
 function main(){
 	myCanvas = document.createElement("canvas");
 	myCanvas.setAttribute('id', 'myCanvas');
-    ctx = myCanvas.getContext("2d");
-    myCanvas.width = window.innerWidth;
+   	ctx = myCanvas.getContext("2d");
+    	myCanvas.width = window.innerWidth;
 	myCanvas.height = window.innerHeight;
-    document.body.appendChild(myCanvas);
-    createPoint();   
+    	document.body.appendChild(myCanvas);
+    	createPoint();   
 }
 window.addEventListener("load", main);
